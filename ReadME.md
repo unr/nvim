@@ -45,3 +45,4 @@ Once this is done, you can run `nvim` and should see errors related to needing t
 - [ ] Write out MappingGuide, in actual vimrc (for mapping display in vim)
 - [ ] Write out proper commands list in Readme. (table of <leader> func, etc)
 - [ ] Proper install guide (install neovim w/ python, setup dein, install these dotfiles, run build)
+- [ ] Improve PHP support (more augroup fixes, w/e the fuck is wrong with deocomplete)

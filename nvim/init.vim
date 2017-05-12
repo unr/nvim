@@ -107,6 +107,11 @@ nmap <leader>w :w<Cr>
 
 
 
+" @@ Filetype specific tweaks
+" use spaces in php
+autocmd FileType php setlocal expandtab
+
+
 " @@ VimEasyMotion configs
 " Gif config
 map <Leader>l <Plug>(easymotion-lineforward)
@@ -293,8 +298,8 @@ let g:deoplete#omni_patterns = get(g:, 'deoplete#omni_patterns', {})
 let g:deoplete#omni_patterns.html = '<[^>]*'
 " let g:deoplete#omni_patterns.javascript = '[^. *\t]\.\w*'
 " let g:deoplete#omni_patterns.javascript = '[^. \t]\.\%\(\h\w*\)\?'
-let g:deoplete#omni_patterns.php =
-  \ '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
+"let g:deoplete#omni_patterns.php =
+  "\ '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
 
 let g:deoplete#omni#input_patterns = get(g:, 'deoplete#omni#input_patterns', {})
 let g:deoplete#omni#input_patterns.xml = '<[^>]*'
