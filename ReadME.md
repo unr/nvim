@@ -1,19 +1,19 @@
 # UNR's Dark Powered Neovim Configs
 
-Heavily inspired by (vim-config)[https://github.com/rafi/vim-config] and (SpaceVim)[https://spacevim.org].
+Heavily inspired by [vim-config](https://github.com/rafi/vim-config) and [SpaceVim](https://spacevim.org).
 
 Written from the ground up by myself.
 
 
 ## Basic Install.
 
-1. *Install Neovim*. I prefer to use homebrew, other options (available here)[https://github.com/neovim/neovim/wiki/Installing-Neovim];
+1. *Install Neovim*. I prefer to use homebrew, other options [available here](https://github.com/neovim/neovim/wiki/Installing-Neovim);
 
 `brew install neovim/neovim/neovim`
 
 Need to be sure that this has Python support - required for dark-powered plugins.
 
-2. *Install Shougu/dein*. The key dark-powered element of our setup. Below are the install instructions (based on the official docs)[https://github.com/Shougo/dein.vim/].
+2. *Install Shougu/dein*. The key dark-powered element of our setup. Below are the install instructions [based on the official docs](https://github.com/Shougo/dein.vim/).
 
 ```bash
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
