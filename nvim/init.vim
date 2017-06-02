@@ -40,7 +40,6 @@ if dein#load_state('~/.dein-nvim')
   call dein#add('Shougo/deoplete.nvim')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/echodoc.vim')
   call dein#add('carlitux/deoplete-ternjs')
   " Feel like when I use tern_for_vim and deoplete, I get weird duplications
   " call dein#add('ternjs/tern_for_vim')
@@ -105,11 +104,21 @@ inoremap kj <esc>
 " use <leader>w to write
 nmap <leader>w :w<Cr>
 
+" ezpz copy to clipboard
+vmap <leader>y "+y
 
+" use leader to clear highlights
+nmap <leader><Cr> :nohl<Cr>
 
 " @@ Filetype specific tweaks
+" Blade files set as blade type
+autocmd BufRead,BufNewFile *.blade.php set filetype=blade
+
 " use spaces in php
 autocmd FileType php setlocal expandtab
+
+" And not use them in blade...
+autocmd FileType blade setlocal noexpandtab
 
 
 " @@ VimEasyMotion configs
