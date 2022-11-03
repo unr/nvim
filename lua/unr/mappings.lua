@@ -1,7 +1,5 @@
 local map = require('unr.utils').map
 
-local silent = { silent = true }
-
 -- Input Mode
 
 -- Piano JK to exit Normal mode
@@ -54,3 +52,11 @@ map('n', '<leader>fo', "<cmd> Telescope oldfiles <CR>", { noremap = true })
 map('n', '<leader>fk', "<cmd> Telescope keymaps <CR>", { noremap = true })
 map('n', '<leader>fc', "<cmd> Telescope git_commits <CR>", { noremap = true })
 map('n', '<leader>fg', "<cmd> Telescope git_status <CR>", { noremap = true })
+
+-- ESC Should clear highlights
+-- Due to my old man hands, I also like <leader><CR> here
+map('n', '<ESC>', "<cmd> noh <CR>", { noremap = true })
+map('n', '<leader><CR>', "<cmd> noh <CR>", { noremap = true })
+
+-- Open nvim-tree with ctrl n
+map('n', '<C-n>', "<cmd> NvimTreeToggle <CR>", { noremap = true })
