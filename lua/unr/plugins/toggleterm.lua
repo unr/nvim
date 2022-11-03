@@ -1,0 +1,30 @@
+-- Support for terminals
+-- TODO temporarily disabled
+-- TODO determine why the f this opens/closes on press of enter???
+-- require("toggleterm").setup({
+-- 	close_on_exit = false,
+-- 	insert_mappings = false,
+-- 	terminal_mappings = false,
+-- })
+-- ctrl-f       Floating Terminal
+-- ctrl-t       Vertical Terminal
+-- ctrl-m       Horizontal Terminal
+-- utils.map('n', '<C-f>', "<cmd> ToggleTerm size=20 direction=float <CR>", { noremap = true })
+-- utils.map('n', '<C-t>', "<cmd> ToggleTerm size=80 direction=vertical <CR>", { noremap = true })
+-- utils.map('n', '<C-m>', "<cmd> ToggleTerm size=20 direction=horizontal <CR>", { noremap = true })
+-- -- adding custom hotkeys to the terminal mode
+-- function _G.set_terminal_keymaps()
+-- 	local opts = { buffer = 0 }
+-- 	-- vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
+-- 	-- vim.keymap.set('t', 'jk', [[<C-\><C-n>]], opts)
+-- 	vim.keymap.set('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+-- 	vim.keymap.set('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+-- 	vim.keymap.set('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+-- 	vim.keymap.set('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+-- 	vim.keymap.set('t', '<C-f>', "<cmd> ToggleTermToggleAll <CR>", opts)
+-- 	vim.keymap.set('t', '<C-m>', "<cmd> ToggleTermToggleAll <CR>", opts)
+-- 	vim.keymap.set('t', '<C-t>', "<cmd> ToggleTermToggleAll <CR>", opts)
+-- end
+--
+-- -- if you only want these mappings for toggle term use term://*toggleterm#* instead
+-- vim.cmd('autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()')

@@ -19,7 +19,7 @@ require('packer').startup(function(use)
 	-- setup telescope + plenary
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		requires = { { 'nvim-lua/plenary.nvim' } }
+		requires = { 'nvim-lua/plenary.nvim' }
 	}
 
 	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -144,8 +144,8 @@ utils.map('i', '<Tab>', [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { noremap = true
 utils.map('i', '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], { noremap = true, expr = true })
 
 -- Swap forward/backwards in buffers
-utils.map('n', '<Tab>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
-utils.map('n', '<S-Tab>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })
+utils.map('n', '<Tab>', '<Cmd>BufferNext<CR>', { noremap = true, silent = true })
+utils.map('n', '<S-Tab>', '<Cmd>BufferPrevious<CR>', { noremap = true, silent = true })
 -- Close buffer
 utils.map('n', '<leader>x', '<Cmd>BufferClose<CR>', { noremap = true, silent = true })
 -- Goto buffer in position...
