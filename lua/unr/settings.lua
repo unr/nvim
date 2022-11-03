@@ -80,12 +80,6 @@ opt.scrolloff = 5 -- Lines to scroll when cursor leaves screen
 opt.sidescrolloff = 3 -- Lines to scroll horizontally
 opt.suffixesadd = { '.md', '.js', '.ts', '.tsx' } -- File extensions not required when opening with `gf`
 
--- Backups
-opt.backup = true
-opt.backupdir = { vim.env.XDG_DATA_HOME .. '/nvim/backups' }
-opt.backupskip = { '/tmp/*', '/private/tmp/*' }
-opt.writebackup = true
-
 -- Undo & History
 opt.undofile = true
 opt.undolevels = 1000
