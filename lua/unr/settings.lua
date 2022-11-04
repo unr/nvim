@@ -30,6 +30,7 @@ opt.linebreak = true -- Break lines by spaces or tabs
 
 opt.number = true
 opt.relativenumber = true
+opt.numberwidth = 2
 opt.signcolumn = 'yes'
 opt.showmode = false
 
