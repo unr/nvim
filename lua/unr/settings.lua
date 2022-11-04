@@ -19,9 +19,9 @@ opt.grepformat = '%f:%l:%c:%m,%f:%l:%m'
 
 -- Ignore some folders and files with find
 opt.wildignore = {
-	'**/node_modules/**',
-	'**/.git/**',
-	'**/.nuxt/**',
+    '**/node_modules/**',
+    '**/.git/**',
+    '**/.nuxt/**',
 }
 
 -- UI
@@ -38,23 +38,24 @@ opt.mouse = 'a'
 
 opt.list = true
 opt.listchars = {
-	nbsp = '⦸', -- CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
-	tab = '  ',
-	extends = '»', -- RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00BB, UTF-8: C2 BB)
-	precedes = '«', -- LEFT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00AB, UTF-8: C2 AB)
-	trail = '·', -- Dot Operator (U+22C5)
+    nbsp = '⦸', -- CIRCLED REVERSE SOLIDUS (U+29B8, UTF-8: E2 A6 B8)
+    tab = '  ',
+    extends = '»', -- RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00BB, UTF-8: C2 BB)
+    precedes = '«', -- LEFT-POINTING DOUBLE ANGLE QUOTATION MARK (U+00AB, UTF-8: C2 AB)
+    trail = '·', -- Dot Operator (U+22C5)
 }
 
 -- Show cool character on line wrap
 opt.showbreak = '↳ ' -- DOWNWARDS ARROW WITH TIP RIGHTWARDS (U+21B3, UTF-8: E2 86 B3)
 opt.fillchars = {
-	eob = ' ', -- Suppress ~ at EndOfBuffer
-	fold = ' ', -- Hide trailing folding characters
+    eob = ' ', -- Suppress ~ at EndOfBuffer
+    fold = ' ', -- Hide trailing folding characters
 }
 
 
 opt.cursorline = true -- Highlight current line
 opt.colorcolumn = { 121 } -- Highlight columns
+opt.textwidth = 121 -- was set to 0, causing my text to randomly wrap while typing
 opt.showmatch = true -- Highlight matching parenthesis, etc.
 
 opt.cmdheight = 0
