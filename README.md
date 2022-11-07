@@ -12,10 +12,12 @@ It might be all hand written, but it wasn't hand thoughten.
 - [ ] Figure out _what the actual fuck_ is going on with treesitter parsing
 - [ ] Swap out autocomplete for nvm-cmp / friendly-snippets (seems most popular)
 - [ ] Need autoformatters for vue, make sure prettier and things are running.
+  [formatter](https://github.com/mhartington/formatter.nvim) maybe?
 - [ ] Setup Whichkey
 - [ ] Tinker with noice until I'm satisfied
 - [ ] Somehow steal pretty telescope from NVChad
 - [ ] Determine a workflow for project jumping, so we can use Neovide or similar
+- [ ] [Setup Colorizer](https://github.com/nvchad/nvim-colorizer.lua)
 
 
 

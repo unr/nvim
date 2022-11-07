@@ -18,45 +18,42 @@ require('lsp-setup').setup({
 			},
 		},
 		tailwindcss = {},
-		vuels = {
-			config = {
-				css = {},
-				emmet = {},
-				html = {
-					suggest = {}
+		volar = {
+			-- filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
+			filetypes = { 'vue' },
+			documentFeatures = {
+				documentColor = false,
+				documentFormatting = {
+					defaultPrintWidth = 120
 				},
-				javascript = {
-					format = {}
+				documentSymbol = true,
+				foldingRange = true,
+				linkedEditingRange = true,
+				selectionRange = true
+			},
+			languageFeatures = {
+				callHierarchy = true,
+				codeAction = true,
+				codeLens = true,
+				completion = {
+					defaultAttrNameCase = "camelCase",
+					defaultTagNameCase = "both"
 				},
-				stylusSupremacy = {},
-				typescript = {
-					format = {}
-				},
-				vetur = {
-					completion = {
-						autoImport = false,
-						tagCasing = "camel",
-						useScaffoldSnippets = true
-					},
-					format = {
-						defaultFormatter = {
-							js = "prettier",
-							ts = "none"
-						},
-						defaultFormatterOptions = {},
-						scriptInitialIndent = false,
-						styleInitialIndent = false
-					},
-					useWorkspaceDependencies = false,
-					validation = {
-						script = true,
-						style = true,
-						template = true
-					}
-				}
-			}
+				definition = true,
+				diagnostics = true,
+				documentHighlight = true,
+				documentLink = true,
+				hover = true,
+				implementation = true,
+				references = true,
+				rename = true,
+				renameFileRefactoring = true,
+				schemaRequestService = true,
+				semanticTokens = false,
+				signatureHelp = true,
+				typeDefinition = true
+			},
 		},
-		-- volar = {}, -- RUN WITH VUE3 IN FUTURE
 		taplo = {},
 		yamlls = {},
 	}
