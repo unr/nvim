@@ -1,31 +1,27 @@
 # UNR NVIM
 
-Unr got fed up with nvchad, and decided to do it himself.
-
-It might be all hand written, but it wasn't hand thoughten.
+Daily driver for vue development.
 
 
 
 ## TODO
 
-- [ ] Reimplement floating terminal (for some reason pressing enter open/closed it)
-- [ ] Figure out _what the actual fuck_ is going on with treesitter parsing
-- [ ] Swap out autocomplete for nvm-cmp / friendly-snippets (seems most popular)
-- [ ] Need autoformatters for vue, make sure prettier and things are running.
-  [formatter](https://github.com/mhartington/formatter.nvim) maybe?
-- [ ] Setup Whichkey
-- [ ] Tinker with noice until I'm satisfied
-- [ ] Somehow steal pretty telescope from NVChad
-- [ ] Determine a workflow for project jumping, so we can use Neovide or similar
-- [ ] [Setup Colorizer](https://github.com/nvchad/nvim-colorizer.lua)
-- [ ] [Setup Legendary](https://github.com/mrjones2014/legendary.nvim)
-- [ ] Abandon hope, go back to vscode... it's so nice with vue3 anyway.
+- [ ] Delete it all
+- [ ] setup lazynvim
+- [ ] Determine what is missing
+    - [ ] Floating terminals still work?
+    - [ ] FZF searching?
+- [ ] Setup Volar
+- [ ] Prettier/eslint formatting on save/paste
+- [ ] Github Copilot integration
 
 
 
-## Screenshots
+## Screenshots (outdated)
 
-I like to feel pretty.
+~I like to feel pretty.~
+
+Need to recreate these with lazy.nvim
 
 
 ### nvim-tree float, noice ui commandline
