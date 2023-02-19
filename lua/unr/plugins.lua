@@ -62,17 +62,20 @@ return require('packer').startup {
 
 		-- TODO setup lsp
 		-- setup lsp-config, mason
-		use {
-			'junnplus/lsp-setup.nvim',
-			requires = {
-				'neovim/nvim-lspconfig',
-				'williamboman/mason.nvim',
-				'williamboman/mason-lspconfig.nvim',
-			},
-			config = function()
-				require 'unr.plugins.lsp'
-			end,
-		}
+		-- use {
+		-- 	'junnplus/lsp-setup.nvim',
+		-- 	requires = {
+		-- 		'neovim/nvim-lspconfig',
+		-- 		'williamboman/mason.nvim',
+		-- 		'williamboman/mason-lspconfig.nvim',
+		-- 		"jose-elias-alvarez/null-ls.nvim",
+		-- 		"jayp0521/mason-null-ls.nvim",
+		-- 	},
+		-- 	config = function()
+		-- 		require 'unr.plugins.lsp'
+		-- 		require 'unr.plugins.null-ls'
+		-- 	end,
+		-- }
 
 		use {
 			'mhartington/formatter.nvim',

@@ -36,4 +36,4 @@ require('mini.starter').setup({
 })
 
 -- minimal autocomplete, coq.nvim was annoying AF
-require('mini.completion').setup({})
+-- require('mini.completion').setup({})
