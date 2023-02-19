@@ -18,6 +18,8 @@ It might be all hand written, but it wasn't hand thoughten.
 - [ ] Somehow steal pretty telescope from NVChad
 - [ ] Determine a workflow for project jumping, so we can use Neovide or similar
 - [ ] [Setup Colorizer](https://github.com/nvchad/nvim-colorizer.lua)
+- [ ] [Setup Legendary](https://github.com/mrjones2014/legendary.nvim)
+- [ ] Abandon hope, go back to vscode... it's so nice with vue3 anyway.
 
 
 
