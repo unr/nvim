@@ -6,14 +6,17 @@ Daily driver for vue development.
 
 ## TODO
 
-- [ ] Delete it all
-- [ ] setup lazynvim
+- [x] Delete it all
+- [x] setup lazynvim
+- [ ] Setup jk/kj piano esc
+- [ ] Setup <leader>w save
 - [ ] Determine what is missing
     - [ ] Floating terminals still work?
     - [ ] FZF searching?
 - [ ] Setup Volar
 - [ ] Prettier/eslint formatting on save/paste
 - [ ] Github Copilot integration
+- [ ] Figure out how to put command line center of screen, not top
 
 
 
