@@ -21,4 +21,5 @@ map("i", "jk", "<ESC>", { noremap = true, silent = true })
 map("i", "kj", "<ESC>", { noremap = true, silent = true })
 
 -- save file
-map("n", "<leader>w", "<cmd> w <CR>", { noremap = true, silent = true })
+-- SADLY leaderw is used for window management in Lazy
+-- map("n", "<leader>w", "<cmd> w <CR>", { noremap = true, silent = true })
