@@ -1,8 +1,5 @@
 return {
-  -- add catppuccin theme
-  { "ellisonleao/gruvbox.nvim" },
-
-  -- tweak original core settings, to appy catppuccin theme
+  -- tweak original core settings, to apply catppuccin theme
   {
     "LazyVim/LazyVim",
     opts = {
