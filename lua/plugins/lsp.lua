@@ -79,9 +79,9 @@ return {
     opts = {
       ensure_installed = {
         "stylua",
-        "shellcheck",
-        "shfmt",
-        "flake8",
+        -- "shellcheck",
+        -- "shfmt",
+        -- "flake8",
         "vue-language-server",
       },
     },
