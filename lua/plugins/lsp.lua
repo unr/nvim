@@ -15,7 +15,8 @@ return {
         severity_sort = true,
       },
       -- Automatically format on save
-      autoformat = true,
+      -- set to false, to prevent vetur formatting?
+      autoformat = false,
       -- options for vim.lsp.buf.format
       -- `bufnr` and `filter` is handled by the LazyVim formatter,
       -- but can be also overridden when specified
@@ -43,11 +44,18 @@ return {
 
         -- "vue-language-server" is called "volar" still
         volar = {
-          filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+          settings = {
+            volar = {
+              filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
+            },
+          },
         },
 
+        -- commented out to prevent duplicate formatting issues with volar
         -- eslint, to match linting rules for nuxt3
-        eslint = {},
+        eslint = {
+          settings = {},
+        },
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
@@ -79,9 +87,6 @@ return {
     opts = {
       ensure_installed = {
         "stylua",
-        -- "shellcheck",
-        -- "shfmt",
-        -- "flake8",
         "vue-language-server",
       },
     },

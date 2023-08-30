@@ -12,6 +12,11 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     vim.opt_local.expandtab = false
     vim.opt_local.smartindent = false
-    -- vim.b.autoformat = false
   end,
+})
+
+-- Enable EslintFixAll when editing with volar
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = augroup("vue_eslint"),
+  command = "EslintFixAll",
 })
