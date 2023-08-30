@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- Enable EslintFixAll when editing with volar
-vim.api.nvim_create_autocmd("BufWritePre", {
-  group = augroup("vue_eslint"),
-  command = "EslintFixAll",
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   group = augroup("vue_eslint"),
+--   command = "EslintFixAll",
+-- })
