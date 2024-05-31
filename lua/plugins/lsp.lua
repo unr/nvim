@@ -1,107 +1,42 @@
--- Config for LSP Setup
--- LazyVim Docs for LSP https://www.lazyvim.org/plugins/lsp
-
+-- no unique changes here yet
 return {
-
-  -- setup lspconfig to support our LSP
   {
     "neovim/nvim-lspconfig",
-    opts = {
-      -- options for vim.diagnostic.config()
-      diagnostics = {
-        underline = true,
-        update_in_insert = false,
-        virtual_text = { spacing = 4, prefix = "●" },
-        severity_sort = true,
-      },
-      -- Automatically format on save
-      -- set to false, to prevent vetur formatting?
-      autoformat = false,
-      -- options for vim.lsp.buf.format
-      -- `bufnr` and `filter` is handled by the LazyVim formatter,
-      -- but can be also overridden when specified
-      format = {
-        formatting_options = nil,
-        timeout_ms = nil,
-      },
-      -- LSP Server Settings
-      ---@type lspconfig.options
-      servers = {
-        jsonls = {},
-        lua_ls = {
-          -- mason = false, -- set to false if you don't want this server to be installed with mason
+    opts = function(_, opts)
+      local vue_typescript_plugin = require("mason-registry").get_package("vue-language-server"):get_install_path()
+        .. "/node_modules/@vue/language-server"
+        .. "/node_modules/@vue/typescript-plugin"
+
+      opts.servers = vim.tbl_deep_extend("force", opts.servers, {
+        volar = {},
+        -- Volar 2.0 has discontinued their "take over mode" which in previous version provided support for typescript in vue files.
+        -- The new approach to get typescript support involves using the typescript language server along side volar.
+        vtsls = {
           settings = {
-            Lua = {
-              workspace = {
-                checkThirdParty = false,
-              },
-              completion = {
-                callSnippet = "Replace",
+            vtsls = {
+              tsserver = {
+                globalPlugins = {
+                  -- Use typescript language server along with vue typescript plugin
+                  vue = {
+                    name = "@vue/typescript-plugin",
+                    location = vue_typescript_plugin,
+                    languages = { "vue" },
+                  },
+                },
               },
             },
           },
-        },
-
-        -- "vue-language-server" is called "volar" still
-        volar = {
-          settings = {
-            volar = {
-              filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
-            },
+          filetypes = {
+            "javascript",
+            "javascriptreact",
+            "javascript.jsx",
+            "typescript",
+            "typescriptreact",
+            "typescript.tsx",
+            "vue",
           },
         },
-
-        -- commented out to prevent duplicate formatting issues with volar
-        -- eslint, to match linting rules for nuxt3
-        eslint = {
-          settings = {
-            -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
-            workingDirectory = { mode = "auto" },
-          },
-        },
-      },
-      -- you can do any additional lsp server setup here
-      -- return true if you don't want this server to be setup with lspconfig
-      ---@type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
-      setup = {
-        eslint = function()
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            callback = function(event)
-              -- commenting this out, so I can disable volar autoformat, but still eslint fix
-              -- if not require("lazyvim.plugins.lsp.format").enabled() then
-              --   -- exit early if autoformat is not enabled
-              --   return
-              -- end
-
-              local client = vim.lsp.get_active_clients({ bufnr = event.buf, name = "eslint" })[1]
-              if client then
-                local diag = vim.diagnostic.get(event.buf, { namespace = vim.lsp.diagnostic.get_namespace(client.id) })
-                if #diag > 0 then
-                  vim.cmd("EslintFixAll")
-                end
-              end
-            end,
-          })
-        end,
-        -- example to setup with typescript.nvim
-        -- tsserver = function(_, opts)
-        --   require("typescript").setup({ server = opts })
-        --   return true
-        -- end,
-        -- Specify * to use this function as a fallback for any server
-        -- ["*"] = function(server, opts) end,
-      },
-    },
-  },
-
-  -- use Mason to ensure our LSP are installed
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "stylua",
-        "vue-language-server",
-      },
-    },
+      })
+    end,
   },
 }
