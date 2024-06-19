@@ -20,6 +20,9 @@ end
 map("i", "jk", "<ESC>", { noremap = true, silent = true })
 map("i", "kj", "<ESC>", { noremap = true, silent = true })
 
+-- Eslint On Command
+map("n", "<leader>ce", ":EslintFixAll<CR>", { desc = "Run EslintFixAll", remap = true })
+
 -- save file
 -- SADLY leaderw is used for window management in Lazy
 -- map("n", "<leader>w", "<cmd> w <CR>", { noremap = true, silent = true })
