@@ -27,13 +27,18 @@ map("n", "<leader>ce", ":EslintFixAll<CR>", { desc = "Run EslintFixAll", remap =
 -- SADLY leaderw is used for window management in Lazy
 -- map("n", "<leader>w", "<cmd> w <CR>", { noremap = true, silent = true })
 
--- When in vscode, launch lazygit plugin instead of normal version
+-- When in vscode...
 if vim.g.vscode then
+-- launch lazygit plugin instead of normal version
   map("n", "<leader>gg", function()
     vim.fn.VSCodeNotify("lazygit.openLazygit")
   end, { desc = "LazyGit VSCode", remap = true })
+  
+  map("n", "<leader>e", function()
+    vim.fn.VSCodeNotify("workbench.view.explorer")
+  end, { desc = "Explorer VSCode", remap = true })
+  
+  map("n", "<C-s>", function()
+    vim.fn.VSCodeNotify("workbench.action.files.save")
+  end, { noremap = true, silent = true })
 end
--- if exists('g:vscode')
---   " VS Code-specific mappings
---   nnoremap <leader>gg <Cmd>call VSCodeNotify('lazygit.launch')<CR>
--- endif
