@@ -31,3 +31,7 @@
 - Theme: Catppuccin (see lua/plugins/core.lua:6)
 - ESLint integration: Available via `:EslintFixAll` or `<leader>ce`
 - Inlay hints disabled for Vue/TS/JS files
+
+## When Finished
+
+- if changes were made to neovim functionality, ensure that ./CUSTOMIZATIONS.md is kept up to date
