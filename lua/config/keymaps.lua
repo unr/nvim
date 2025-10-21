@@ -16,9 +16,12 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
--- Piano JK to exit Normal mode
-map("i", "jk", "<ESC>", { noremap = true, silent = true })
-map("i", "kj", "<ESC>", { noremap = true, silent = true })
+-- Piano JK to exit Normal mode (for both regular Neovim and VSCode)
+-- These mappings work in regular Neovim
+if not vim.g.vscode then
+  map("i", "jk", "<ESC>", { noremap = true, silent = true })
+  map("i", "kj", "<ESC>", { noremap = true, silent = true })
+end
 
 -- Eslint On Command
 map("n", "<leader>ce", ":EslintFixAll<CR>", { desc = "Run EslintFixAll", remap = true })
@@ -29,16 +32,16 @@ map("n", "<leader>ce", ":EslintFixAll<CR>", { desc = "Run EslintFixAll", remap =
 
 -- When in vscode...
 if vim.g.vscode then
--- launch lazygit plugin instead of normal version
+  -- launch lazygit plugin instead of normal version
   map("n", "<leader>gg", function()
     vim.fn.VSCodeNotify("lazygit.openLazygit")
   end, { desc = "LazyGit VSCode", remap = true })
   
+  -- Open explorer
   map("n", "<leader>e", function()
     vim.fn.VSCodeNotify("workbench.view.explorer")
   end, { desc = "Explorer VSCode", remap = true })
   
-  map("n", "<C-s>", function()
-    vim.fn.VSCodeNotify("workbench.action.files.save")
-  end, { noremap = true, silent = true })
+  -- Trying to map save habits, but doesn't work. Might need to be done at vscode level
+  -- map("n", "<C-s>", "<cmd> w <CR>", { noremap = true, silent = true })
 end
