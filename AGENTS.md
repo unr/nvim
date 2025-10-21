@@ -34,4 +34,4 @@
 
 ## When Finished
 
-- if changes were made to neovim functionality, ensure that ./CUSTOMIZATIONS.md is kept up to date
+- when changes are made to neovim functionality, ensure that README and CUSTOMIZATIONS.md is kept up to date
